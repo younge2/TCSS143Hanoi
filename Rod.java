@@ -13,12 +13,20 @@ public class Rod {
 		
 	}
 	
-	public void getDisk(){
-		
+	public Disk getDisk(){
+		int diskIndex = diskStack.size()-1;
+		Disk toReturn = diskStack.get(diskIndex);
+		diskStack.remove(diskIndex);
+		return toReturn;
 	}
 	
-	public void addDisk(){
-		
+	public boolean addDisk(Disk toAdd){
+		int diskIndex = diskStack.size()-1;
+		Disk topDisk = diskStack.get(diskIndex);
+		if (topDisk.getSize()>=toAdd.getSize()){
+			diskStack.add(toAdd);
+			return true;
+		} else return false;
 	}
 	
 	public String toString(){
