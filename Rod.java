@@ -29,7 +29,10 @@ public class Rod {
 		} else return false;
 	}
 	
-	public String toString(){
+	public void addStateToSB(StringBuilder mySB, int diskNum){
+		
+	}
+	public String toString(StringBuilder mySB, int diskNum){
 		return "default";
 	}
 	
